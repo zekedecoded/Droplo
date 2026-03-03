@@ -1,332 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta property="og:type"        content="website" />
-    <meta property="og:url"         content="https://github.com/zekedecoded/Droplo.git" />
-    <meta property="og:title"       content="Droplo — Fast, Free File Downloads" />
-    <meta property="og:description" content="Over 50,000 verified files. No sign-up required. Download software, documents, and more instantly." />
-    <meta property="og:image"       content="https://yoursite.com/preview.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zekedecoded.github.io/Droplo/" />
+    <meta property="og:title" content="Droplo — Fast, Free File Downloads" />
+    <meta property="og:description"
+        content="Over 50,000 verified files. No sign-up required. Download software, documents, and more instantly." />
+    <meta property="og:image" content="https://zekedecoded.github.io/Droplo/preview.png" />
 
 
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Droplo — Fast, Free File Downloads</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="droplo.ico">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Droplo — Fast, Free File Downloads</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="droplo.ico">
 </head>
+
 <body>
 
-<nav>
-  <div class="nav-logo">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-      <polyline points="7 10 12 15 17 10"/>
-      <line x1="12" y1="15" x2="12" y2="3"/>
-    </svg>
-    Droplo
-  </div>
-  <div class="nav-links">
-    <a href="#" class="active">Browse</a>
-    <a href="#" onclick="fakeNav(event)">Software</a>
-    <a href="#" onclick="fakeNav(event)">Games</a>
-    <a href="#" onclick="fakeNav(event)">Media</a>
-    <a href="#" onclick="fakeNav(event)">Documents</a>
-  </div>
-  <div class="nav-right">
-    <a href="#" class="btn-outline" onclick="fakeNav(event)">Sign in</a>
-    <button class="btn-primary" onclick="fakeNav(event)">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-      Upload
-    </button>
-  </div>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+    <nav>
+        <div class="nav-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Droplo
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Browse</a>
+            <a href="#" onclick="fakeNav(event)">Software</a>
+            <a href="#" onclick="fakeNav(event)">Games</a>
+            <a href="#" onclick="fakeNav(event)">Media</a>
+            <a href="#" onclick="fakeNav(event)">Documents</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="btn-outline" onclick="fakeNav(event)">Sign in</a>
+            <button class="btn-primary" onclick="fakeNav(event)">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                Upload
+            </button>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#" onclick="fakeNav(event)">Browse</a>
-  <a href="#" onclick="fakeNav(event)">Software</a>
-  <a href="#" onclick="fakeNav(event)">Games</a>
-  <a href="#" onclick="fakeNav(event)">Media</a>
-  <a href="#" onclick="fakeNav(event)">Documents</a>
-  <div class="mobile-actions">
-    <a href="#" class="btn-outline" onclick="fakeNav(event)">Sign in</a>
-    <button class="btn-primary" onclick="fakeNav(event)">↑ Upload</button>
-  </div>
-</div>
-
-<div class="hero">
-  <h1>Find and download files instantly</h1>
-  <p>Over 50,000 verified files. No sign-up required.</p>
-  <div class="search-wrap">
-    <input type="text" placeholder="Search files, software, documents…" id="searchInput"/>
-    <button onclick="fakeSearch()">Search</button>
-  </div>
-  <div class="hero-stats">
-    <div class="hero-stat"><b>50,241</b> files available</div>
-    <div class="hero-stat"><b>2.1M</b> downloads this month</div>
-    <div class="hero-stat"><b>99.8%</b> verified safe</div>
-    <div class="hero-stat"><b>Free</b> forever</div>
-  </div>
-</div>
-
-<div class="page-wrap">
-
-  <div>
-
-    <div class="featured-card">
-      <div class="featured-label">⭐ Featured this week</div>
-      <div class="featured-title">Visual Studio Code 1.88</div>
-      <div class="featured-sub">The popular open-source code editor from Microsoft, now with AI-assisted coding features.</div>
-      <div class="featured-meta">
-        <span>📦 94.2 MB</span>
-        <span>💻 Windows / macOS / Linux</span>
-        <span>⬇ 4.2M downloads</span>
-      </div>
-      <button class="featured-dl" onclick="startDownload('VSCode_1.88_Setup.exe', '94.2 MB', '💻')">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Free
-      </button>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" onclick="fakeNav(event)">Browse</a>
+        <a href="#" onclick="fakeNav(event)">Software</a>
+        <a href="#" onclick="fakeNav(event)">Games</a>
+        <a href="#" onclick="fakeNav(event)">Media</a>
+        <a href="#" onclick="fakeNav(event)">Documents</a>
+        <div class="mobile-actions">
+            <a href="#" class="btn-outline" onclick="fakeNav(event)">Sign in</a>
+            <button class="btn-primary" onclick="fakeNav(event)">↑ Upload</button>
+        </div>
     </div>
 
-    <div class="chips">
-      <div class="chip active">All Files</div>
-      <div class="chip">Software</div>
-      <div class="chip">Documents</div>
-      <div class="chip">Images</div>
-      <div class="chip">Audio</div>
-      <div class="chip">Video</div>
-      <div class="chip">Archives</div>
+    <div class="hero">
+        <h1>Find and download files instantly</h1>
+        <p>Over 50,000 verified files. No sign-up required.</p>
+        <div class="search-wrap">
+            <input type="text" placeholder="Search files, software, documents…" id="searchInput" />
+            <button onclick="fakeSearch()">Search</button>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat"><b>50,241</b> files available</div>
+            <div class="hero-stat"><b>2.1M</b> downloads this month</div>
+            <div class="hero-stat"><b>99.8%</b> verified safe</div>
+            <div class="hero-stat"><b>Free</b> forever</div>
+        </div>
     </div>
 
-    <div class="section-header">
-      <h2>Recently Added</h2>
-      <a href="#" onclick="fakeNav(event)">View all →</a>
-    </div>
+    <div class="page-wrap">
 
-    <div class="file-grid">
-
-      <div class="file-card" onclick="startDownload('7-Zip_23.01_x64.exe', '1.5 MB', '📦')">
-        <div class="file-icon-wrap icon-exe">📦</div>
-        <div class="file-info">
-          <div class="file-title">7-Zip 23.01 (64-bit)</div>
-          <div class="file-meta">
-            <span>1.5 MB</span>
-            <span>Windows</span>
-            <span class="badge badge-safe">✓ Verified</span>
-            <span class="badge badge-hot">🔥 Popular</span>
-          </div>
-        </div>
-        <div class="file-actions">
-          <button class="dl-btn" onclick="event.stopPropagation(); startDownload('7-Zip_23.01_x64.exe', '1.5 MB', '📦')">
-            ⬇ Download
-          </button>
-          <div class="dl-count">1.2M downloads</div>
-        </div>
-      </div>
-
-      <div class="file-card" onclick="startDownload('OBS_Studio_30.0.0.exe', '82.4 MB', '🎬')">
-        <div class="file-icon-wrap icon-mp4">🎬</div>
-        <div class="file-info">
-          <div class="file-title">OBS Studio 30.0.0</div>
-          <div class="file-meta">
-            <span>82.4 MB</span>
-            <span>Windows / macOS</span>
-            <span class="badge badge-safe">✓ Verified</span>
-            <span class="badge badge-new">✦ New</span>
-          </div>
-        </div>
-        <div class="file-actions">
-          <button class="dl-btn" onclick="event.stopPropagation(); startDownload('OBS_Studio_30.0.0.exe', '82.4 MB', '🎬')">⬇ Download</button>
-          <div class="dl-count">880K downloads</div>
-        </div>
-      </div>
-
-      <div class="file-card" onclick="startDownload('VLC_3.0.20_win64.exe', '40.1 MB', '🎵')">
-        <div class="file-icon-wrap icon-mp3">🎵</div>
-        <div class="file-info">
-          <div class="file-title">VLC Media Player 3.0.20</div>
-          <div class="file-meta">
-            <span>40.1 MB</span>
-            <span>Windows / macOS / Linux</span>
-            <span class="badge badge-safe">✓ Verified</span>
-          </div>
-        </div>
-        <div class="file-actions">
-          <button class="dl-btn" onclick="event.stopPropagation(); startDownload('VLC_3.0.20_win64.exe', '40.1 MB', '🎵')">⬇ Download</button>
-          <div class="dl-count">3.1M downloads</div>
-        </div>
-      </div>
-
-      <div class="file-card" onclick="startDownload('Getting_Started_Guide.pdf', '2.3 MB', '📄')">
-        <div class="file-icon-wrap icon-pdf">📄</div>
-        <div class="file-info">
-          <div class="file-title">Getting Started with Linux — Guide (PDF)</div>
-          <div class="file-meta">
-            <span>2.3 MB</span>
-            <span>PDF Document</span>
-            <span class="badge badge-safe">✓ Verified</span>
-          </div>
-        </div>
-        <div class="file-actions">
-          <button class="dl-btn" onclick="event.stopPropagation(); startDownload('Getting_Started_Guide.pdf', '2.3 MB', '📄')">⬇ Download</button>
-          <div class="dl-count">42K downloads</div>
-        </div>
-      </div>
-
-      <div class="file-card" onclick="startDownload('GIMP_2.10.36_setup.exe', '253 MB', '🖼️')">
-        <div class="file-icon-wrap icon-img">🖼️</div>
-        <div class="file-info">
-          <div class="file-title">GIMP 2.10.36 — Image Editor</div>
-          <div class="file-meta">
-            <span>253 MB</span>
-            <span>Windows / macOS / Linux</span>
-            <span class="badge badge-safe">✓ Verified</span>
-          </div>
-        </div>
-        <div class="file-actions">
-          <button class="dl-btn" onclick="event.stopPropagation(); startDownload('GIMP_2.10.36_setup.exe', '253 MB', '🖼️')">⬇ Download</button>
-          <div class="dl-count">590K downloads</div>
-        </div>
-      </div>
-
-      <div class="file-card" onclick="startDownload('LibreOffice_24.2_Win_x86-64.msi', '357 MB', '📝')">
-        <div class="file-icon-wrap icon-doc">📝</div>
-        <div class="file-info">
-          <div class="file-title">LibreOffice 24.2 (64-bit)</div>
-          <div class="file-meta">
-            <span>357 MB</span>
-            <span>Windows</span>
-            <span class="badge badge-safe">✓ Verified</span>
-            <span class="badge badge-new">✦ New</span>
-          </div>
-        </div>
-        <div class="file-actions">
-          <button class="dl-btn" onclick="event.stopPropagation(); startDownload('LibreOffice_24.2_Win_x86-64.msi', '357 MB', '📝')">⬇ Download</button>
-          <div class="dl-count">760K downloads</div>
-        </div>
-      </div>
-
-      <div class="file-card" onclick="startDownload('Audacity_3.5.1_win_x64.exe', '33.7 MB', '🎙️')">
-        <div class="file-icon-wrap icon-mp3">🎙️</div>
-        <div class="file-info">
-          <div class="file-title">Audacity 3.5.1 — Audio Editor</div>
-          <div class="file-meta">
-            <span>33.7 MB</span>
-            <span>Windows / macOS</span>
-            <span class="badge badge-safe">✓ Verified</span>
-          </div>
-        </div>
-        <div class="file-actions">
-          <button class="dl-btn" onclick="event.stopPropagation(); startDownload('Audacity_3.5.1_win_x64.exe', '33.7 MB', '🎙️')">⬇ Download</button>
-          <div class="dl-count">320K downloads</div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="pagination">
-      <button class="page-btn" disabled>← Prev</button>
-      <button class="page-btn active">1</button>
-      <button class="page-btn" onclick="fakeNav(event)">2</button>
-      <button class="page-btn" onclick="fakeNav(event)">3</button>
-      <button class="page-btn" onclick="fakeNav(event)">…</button>
-      <button class="page-btn" onclick="fakeNav(event)">892</button>
-      <button class="page-btn" onclick="fakeNav(event)">Next →</button>
-    </div>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="widget">
-      <div class="widget-title">📈 Top Downloads</div>
-      <div class="widget-body" style="padding: 6px 14px;">
-        <div class="top-file">
-          <div class="top-rank gold">1</div>
-          <div class="top-file-name">VSCode 1.88</div>
-          <div class="top-file-dl">4.2M</div>
-        </div>
-        <div class="top-file">
-          <div class="top-rank silver">2</div>
-          <div class="top-file-name">VLC 3.0.20</div>
-          <div class="top-file-dl">3.1M</div>
-        </div>
-        <div class="top-file">
-          <div class="top-rank bronze">3</div>
-          <div class="top-file-name">7-Zip 23.01</div>
-          <div class="top-file-dl">1.2M</div>
-        </div>
-        <div class="top-file">
-          <div class="top-rank">4</div>
-          <div class="top-file-name">LibreOffice 24.2</div>
-          <div class="top-file-dl">760K</div>
-        </div>
-        <div class="top-file">
-          <div class="top-rank">5</div>
-          <div class="top-file-name">GIMP 2.10.36</div>
-          <div class="top-file-dl">590K</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="widget">
-      <div class="widget-title">📊 Site Stats</div>
-      <div class="widget-body" style="padding: 8px;">
-        <div class="stat-grid">
-          <div class="stat-box"><span class="stat-box-num">50K+</span><span class="stat-box-label">Files</span></div>
-          <div class="stat-box"><span class="stat-box-num">2.1M</span><span class="stat-box-label">This Month</span></div>
-          <div class="stat-box"><span class="stat-box-num">99.8%</span><span class="stat-box-label">Safe Files</span></div>
-          <div class="stat-box"><span class="stat-box-num">12ms</span><span class="stat-box-label">Avg Speed</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="widget">
-      <div class="widget-title">☁️ Share a File</div>
-      <div class="widget-body">
-        <div class="upload-cta">
-          <h4>Upload your own files</h4>
-          <p>Share files up to 2 GB. Free for everyone.</p>
-          <button class="btn-primary" style="width:100%; justify-content:center" onclick="fakeNav(event)">
-            ↑ Upload File
-          </button>
-        </div>
-      </div>
-    </div>
-
-  </aside>
-</div>
-
-<div class="modal-overlay" id="dlModal">
-  <div class="modal">
-    <div class="modal-header">
-      <h3>Downloading file</h3>
-      <button class="modal-x" onclick="closeModal()">✕</button>
-    </div>
-    <div class="modal-body">
-      <div class="modal-file-row">
-        <div class="modal-file-icon" id="modal-icon">📄</div>
         <div>
-          <div class="modal-file-name" id="modal-fname">filename.zip</div>
-          <div class="modal-file-size" id="modal-fsize">—</div>
+
+            <div class="featured-card">
+                <div class="featured-label">⭐ Featured this week</div>
+                <div class="featured-title">Visual Studio Code 1.88</div>
+                <div class="featured-sub">The popular open-source code editor from Microsoft, now with AI-assisted
+                    coding features.</div>
+                <div class="featured-meta">
+                    <span>📦 94.2 MB</span>
+                    <span>💻 Windows / macOS / Linux</span>
+                    <span>⬇ 4.2M downloads</span>
+                </div>
+                <button class="featured-dl" onclick="startDownload('VSCode_1.88_Setup.exe', '94.2 MB', '💻')">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download Free
+                </button>
+            </div>
+
+            <div class="chips">
+                <div class="chip active">All Files</div>
+                <div class="chip">Software</div>
+                <div class="chip">Documents</div>
+                <div class="chip">Images</div>
+                <div class="chip">Audio</div>
+                <div class="chip">Video</div>
+                <div class="chip">Archives</div>
+            </div>
+
+            <div class="section-header">
+                <h2>Recently Added</h2>
+                <a href="#" onclick="fakeNav(event)">View all →</a>
+            </div>
+
+            <div class="file-grid">
+
+                <div class="file-card" onclick="startDownload('7-Zip_23.01_x64.exe', '1.5 MB', '📦')">
+                    <div class="file-icon-wrap icon-exe">📦</div>
+                    <div class="file-info">
+                        <div class="file-title">7-Zip 23.01 (64-bit)</div>
+                        <div class="file-meta">
+                            <span>1.5 MB</span>
+                            <span>Windows</span>
+                            <span class="badge badge-safe">✓ Verified</span>
+                            <span class="badge badge-hot">🔥 Popular</span>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="dl-btn"
+                            onclick="event.stopPropagation(); startDownload('7-Zip_23.01_x64.exe', '1.5 MB', '📦')">
+                            ⬇ Download
+                        </button>
+                        <div class="dl-count">1.2M downloads</div>
+                    </div>
+                </div>
+
+                <div class="file-card" onclick="startDownload('OBS_Studio_30.0.0.exe', '82.4 MB', '🎬')">
+                    <div class="file-icon-wrap icon-mp4">🎬</div>
+                    <div class="file-info">
+                        <div class="file-title">OBS Studio 30.0.0</div>
+                        <div class="file-meta">
+                            <span>82.4 MB</span>
+                            <span>Windows / macOS</span>
+                            <span class="badge badge-safe">✓ Verified</span>
+                            <span class="badge badge-new">✦ New</span>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="dl-btn"
+                            onclick="event.stopPropagation(); startDownload('OBS_Studio_30.0.0.exe', '82.4 MB', '🎬')">⬇
+                            Download</button>
+                        <div class="dl-count">880K downloads</div>
+                    </div>
+                </div>
+
+                <div class="file-card" onclick="startDownload('VLC_3.0.20_win64.exe', '40.1 MB', '🎵')">
+                    <div class="file-icon-wrap icon-mp3">🎵</div>
+                    <div class="file-info">
+                        <div class="file-title">VLC Media Player 3.0.20</div>
+                        <div class="file-meta">
+                            <span>40.1 MB</span>
+                            <span>Windows / macOS / Linux</span>
+                            <span class="badge badge-safe">✓ Verified</span>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="dl-btn"
+                            onclick="event.stopPropagation(); startDownload('VLC_3.0.20_win64.exe', '40.1 MB', '🎵')">⬇
+                            Download</button>
+                        <div class="dl-count">3.1M downloads</div>
+                    </div>
+                </div>
+
+                <div class="file-card" onclick="startDownload('Getting_Started_Guide.pdf', '2.3 MB', '📄')">
+                    <div class="file-icon-wrap icon-pdf">📄</div>
+                    <div class="file-info">
+                        <div class="file-title">Getting Started with Linux — Guide (PDF)</div>
+                        <div class="file-meta">
+                            <span>2.3 MB</span>
+                            <span>PDF Document</span>
+                            <span class="badge badge-safe">✓ Verified</span>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="dl-btn"
+                            onclick="event.stopPropagation(); startDownload('Getting_Started_Guide.pdf', '2.3 MB', '📄')">⬇
+                            Download</button>
+                        <div class="dl-count">42K downloads</div>
+                    </div>
+                </div>
+
+                <div class="file-card" onclick="startDownload('GIMP_2.10.36_setup.exe', '253 MB', '🖼️')">
+                    <div class="file-icon-wrap icon-img">🖼️</div>
+                    <div class="file-info">
+                        <div class="file-title">GIMP 2.10.36 — Image Editor</div>
+                        <div class="file-meta">
+                            <span>253 MB</span>
+                            <span>Windows / macOS / Linux</span>
+                            <span class="badge badge-safe">✓ Verified</span>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="dl-btn"
+                            onclick="event.stopPropagation(); startDownload('GIMP_2.10.36_setup.exe', '253 MB', '🖼️')">⬇
+                            Download</button>
+                        <div class="dl-count">590K downloads</div>
+                    </div>
+                </div>
+
+                <div class="file-card" onclick="startDownload('LibreOffice_24.2_Win_x86-64.msi', '357 MB', '📝')">
+                    <div class="file-icon-wrap icon-doc">📝</div>
+                    <div class="file-info">
+                        <div class="file-title">LibreOffice 24.2 (64-bit)</div>
+                        <div class="file-meta">
+                            <span>357 MB</span>
+                            <span>Windows</span>
+                            <span class="badge badge-safe">✓ Verified</span>
+                            <span class="badge badge-new">✦ New</span>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="dl-btn"
+                            onclick="event.stopPropagation(); startDownload('LibreOffice_24.2_Win_x86-64.msi', '357 MB', '📝')">⬇
+                            Download</button>
+                        <div class="dl-count">760K downloads</div>
+                    </div>
+                </div>
+
+                <div class="file-card" onclick="startDownload('Audacity_3.5.1_win_x64.exe', '33.7 MB', '🎙️')">
+                    <div class="file-icon-wrap icon-mp3">🎙️</div>
+                    <div class="file-info">
+                        <div class="file-title">Audacity 3.5.1 — Audio Editor</div>
+                        <div class="file-meta">
+                            <span>33.7 MB</span>
+                            <span>Windows / macOS</span>
+                            <span class="badge badge-safe">✓ Verified</span>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="dl-btn"
+                            onclick="event.stopPropagation(); startDownload('Audacity_3.5.1_win_x64.exe', '33.7 MB', '🎙️')">⬇
+                            Download</button>
+                        <div class="dl-count">320K downloads</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" disabled>← Prev</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn" onclick="fakeNav(event)">2</button>
+                <button class="page-btn" onclick="fakeNav(event)">3</button>
+                <button class="page-btn" onclick="fakeNav(event)">…</button>
+                <button class="page-btn" onclick="fakeNav(event)">892</button>
+                <button class="page-btn" onclick="fakeNav(event)">Next →</button>
+            </div>
         </div>
-      </div>
-      <div class="progress-label">
-        <span id="progress-status">Preparing download…</span>
-        <span id="progress-pct">0%</span>
-      </div>
-      <div class="progress-track">
-        <div class="progress-fill" id="progress-fill"></div>
-      </div>
-      <div class="progress-msg" id="progress-msg"></div>
+
+        <aside class="sidebar">
+
+            <div class="widget">
+                <div class="widget-title">📈 Top Downloads</div>
+                <div class="widget-body" style="padding: 6px 14px;">
+                    <div class="top-file">
+                        <div class="top-rank gold">1</div>
+                        <div class="top-file-name">VSCode 1.88</div>
+                        <div class="top-file-dl">4.2M</div>
+                    </div>
+                    <div class="top-file">
+                        <div class="top-rank silver">2</div>
+                        <div class="top-file-name">VLC 3.0.20</div>
+                        <div class="top-file-dl">3.1M</div>
+                    </div>
+                    <div class="top-file">
+                        <div class="top-rank bronze">3</div>
+                        <div class="top-file-name">7-Zip 23.01</div>
+                        <div class="top-file-dl">1.2M</div>
+                    </div>
+                    <div class="top-file">
+                        <div class="top-rank">4</div>
+                        <div class="top-file-name">LibreOffice 24.2</div>
+                        <div class="top-file-dl">760K</div>
+                    </div>
+                    <div class="top-file">
+                        <div class="top-rank">5</div>
+                        <div class="top-file-name">GIMP 2.10.36</div>
+                        <div class="top-file-dl">590K</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="widget-title">📊 Site Stats</div>
+                <div class="widget-body" style="padding: 8px;">
+                    <div class="stat-grid">
+                        <div class="stat-box"><span class="stat-box-num">50K+</span><span
+                                class="stat-box-label">Files</span></div>
+                        <div class="stat-box"><span class="stat-box-num">2.1M</span><span class="stat-box-label">This
+                                Month</span></div>
+                        <div class="stat-box"><span class="stat-box-num">99.8%</span><span class="stat-box-label">Safe
+                                Files</span></div>
+                        <div class="stat-box"><span class="stat-box-num">12ms</span><span class="stat-box-label">Avg
+                                Speed</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="widget-title">☁️ Share a File</div>
+                <div class="widget-body">
+                    <div class="upload-cta">
+                        <h4>Upload your own files</h4>
+                        <p>Share files up to 2 GB. Free for everyone.</p>
+                        <button class="btn-primary" style="width:100%; justify-content:center" onclick="fakeNav(event)">
+                            ↑ Upload File
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
     </div>
-    <div class="modal-footer">
-      <button class="btn-outline" onclick="closeModal()">Cancel</button>
+
+    <div class="modal-overlay" id="dlModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Downloading file</h3>
+                <button class="modal-x" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-file-row">
+                    <div class="modal-file-icon" id="modal-icon">📄</div>
+                    <div>
+                        <div class="modal-file-name" id="modal-fname">filename.zip</div>
+                        <div class="modal-file-size" id="modal-fsize">—</div>
+                    </div>
+                </div>
+                <div class="progress-label">
+                    <span id="progress-status">Preparing download…</span>
+                    <span id="progress-pct">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-msg" id="progress-msg"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-outline" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
